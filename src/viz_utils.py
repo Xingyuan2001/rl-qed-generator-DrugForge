@@ -121,22 +121,6 @@ def draw_top_molecules_grid(
     sub_img_size=(300, 300),
     save_path="figures/top9_qed_molecules.png",
 ):
-    """
-    将若干个分子画在一张网格图上，并保存为 PNG。
-
-    参数：
-      smiles_list: list[str]，SMILES 列表，长度建议为 9（3x3）
-      qeds: list[float] or None，对应的 QED 分数（用于做图例），可为 None
-      n_cols: 网格中的列数（默认 3）
-      sub_img_size: 单个子图的像素大小
-      save_path: 保存路径（.png）
-
-    用法示例（在 main.ipynb 里）：
-        from viz_utils import draw_top_molecules_grid
-        smiles = [r["smiles"] for r in top_k]  # top_k 是你的前 9 个分子
-        qeds = [r["qed"] for r in top_k]
-        draw_top_molecules_grid(smiles, qeds, save_path="figures/top9_qed.png")
-    """
     mols = []
     legends = []
 
